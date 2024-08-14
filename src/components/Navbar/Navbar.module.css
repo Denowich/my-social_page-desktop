@@ -9,7 +9,11 @@
       text-decoration: none;
 }
 
-.item a:focus {
-      color: rgb(224, 11, 11);
+/* .item .active a:focus {
+      color: rgb(255, 255, 6);
       text-decoration: underline;
+} */
+
+.active a {
+      color: rgb(255, 255, 6);
 }

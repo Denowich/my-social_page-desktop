@@ -1,6 +1,9 @@
 .footer {
       grid-area: footer;
-      background-color: cadetblue;
+      background-color: rgb(183, 195, 22);
+      color: aliceblue;
       height: 60px;
       text-align: center;
+      display: grid;
+      align-items: center;
 }

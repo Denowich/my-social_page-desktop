@@ -9,7 +9,7 @@ import { Header } from './components/Header/Header';
 import { Navbar } from './components/Navbar/Navbar';
 import { Profile } from './components/Profile/Profile';
 
-function App() {
+function App(props) {
       return (
             <BrowserRouter>
                   <div className='App-wrapper'>
@@ -19,27 +19,29 @@ function App() {
                         <div className='app-wrapper-content'>
                               <Routes>
                                     <Route
-                                          exact
                                           path='/profile/*'
-                                          element={<Profile />}
+                                          element={
+                                                <Profile posts={props.posts} />
+                                          }
                                     ></Route>
                                     <Route
-                                          exact
                                           path='/dialogs/*'
-                                          element={<Dialogs />}
+                                          element={
+                                                <Dialogs
+                                                      dialogs={props.dialogs}
+                                                      messages={props.messages}
+                                                />
+                                          }
                                     ></Route>
                                     <Route
-                                          exact
                                           path='/news/*'
                                           element={<News />}
                                     ></Route>
                                     <Route
-                                          exact
                                           path='/music/*'
                                           element={<Music />}
                                     ></Route>
                                     <Route
-                                          exact
                                           path='/settings/*'
                                           element={<Settings />}
                                     ></Route>
